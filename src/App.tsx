@@ -14,7 +14,7 @@ export default function App() {
     <div className="relative h-[100vh] bg-blue-50">
       <ReactFlow nodes={initialNodes} edges={initialEdges}>
         <Background />
-        <div className="absolute w-[200px] h-[100%] z-10">
+        <div className="absolute w-[300px] h-[100%] z-10">
           <Instruments />
         </div>
       </ReactFlow>
