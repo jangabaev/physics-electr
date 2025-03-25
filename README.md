@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+ElectroLab: Physics Simulation with React Flow
+Welcome to ElectroLab, a React-based project designed to simulate physics experiments related to electricity using the powerful React Flow library. This project provides an interactive and engaging way for users to practice and understand electrical concepts visually.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Interactive Simulations: Create and manipulate electrical circuits with drag-and-drop functionality.
 
-Currently, two official plugins are available:
+Customizable Components: Add resistors, capacitors, wires, and more to your circuit.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Real-Time Feedback: Visualize current flow and calculate voltages instantly.
 
-## Expanding the ESLint configuration
+User-Friendly Interface: Easy-to-use layout with seamless performance, powered by React and Vite.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Educational Focus: Tailored for students and educators in physics.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🛠️ Built With
+React: A JavaScript library for building user interfaces.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Vite: A fast and modern build tool for web projects.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+React Flow: A library for building node-based graphs and diagrams.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+📂 Project Structure
+php
+Copy
+Edit
+├── src
+│   ├── components       # React components for the application
+│   ├── assets           # Images and other static assets
+│   ├── hooks            # Custom React hooks
+│   ├── pages            # Application pages
+│   └── App.tsx          # Main application file
+├── public               # Static files
+├── package.json         # Project dependencies
+└── vite.config.ts       # Vite configuration file
+📦 Installation
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/electrolab.git
+cd electrolab
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Start the development server:
+
+bash
+Copy
+Edit
+npm run dev
+Open your browser and navigate to http://localhost:5173.
+
+📘 Usage
+Drag components like resistors, batteries, and wires from the toolbox onto the workspace.
+
+Connect components to build an electric circuit.
+
+View real-time calculations of voltage and current across the circuit.
+
+🤝 Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+🌟 Thank you for using ElectroLab!
