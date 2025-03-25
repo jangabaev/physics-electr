@@ -1,5 +1,7 @@
 import React from "react";
 import { CardForInstruments } from "../../ui/card/index";
+import { useDnD } from "../../provider-dnd";
+import { NodeTypes } from "@xyflow/react";
 
 const instrumentsData = [
   {
@@ -23,11 +25,18 @@ const instrumentsData = [
 ];
 
 export const Sourse = () => {
+  const [_, setType] = useDnD();
+ 
+  const onDragStart = (event:any, nodeType:string) => {
+    console.log("dkdkd")
+    setType(nodeType);
+    event.dataTransfer.effectAllowed = 'move';
+  };
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <aside className="grid grid-cols-3 gap-2">
       {instrumentsData.map((el) => (
-        <div key={el.id} onDrag={(el) => console.log(el)}>
-          <div className="p-1 bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col gap-1">
+        <div key={el.id} onDragStart={(event) => onDragStart(event, 'input')} className="bg-blue-300 dndnode">
+          <div className="p-1 bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col gap-1 select-none">
             <div className="flex justify-center">
               <img src={el.img} alt="" className="w-[40px] h-[40px]" />
             </div>
@@ -35,6 +44,6 @@ export const Sourse = () => {
           </div>
         </div>
       ))}
-    </div>
+    </aside>
   );
 };

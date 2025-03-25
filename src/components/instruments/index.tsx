@@ -7,7 +7,7 @@ export const Instruments = () => {
     <div className="relative h-full">
       <div className="absolute top-[100px] left-[10px]">
         {modal && (
-          <div className="bg-white shadow-lg p-2 rounded-[10px]">
+          <div className="bg-white shadow-lg p-2 rounded-[10px] min-w-[240px]">
             <h3 className="text-xl font-bold mb-[10px]">Pyhsics instruments</h3>
             <div className="bg-gray-100 p-2">
               <Sourse />
