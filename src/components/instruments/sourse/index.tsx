@@ -29,13 +29,14 @@ export const Sourse = () => {
  
   const onDragStart = (event:any, nodeType:string) => {
     console.log("dkdkd")
+    console.log(nodeType)
     setType(nodeType);
     event.dataTransfer.effectAllowed = 'move';
   };
   return (
     <aside className="grid grid-cols-3 gap-2">
       {instrumentsData.map((el) => (
-        <div key={el.id} onDragStart={(event) => onDragStart(event, 'input')} className="bg-blue-300 dndnode">
+        <div key={el.id} onDragStart={(event) => onDragStart(event, 'capisator')} className="bg-blue-300">
           <div className="p-1 bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col gap-1 select-none">
             <div className="flex justify-center">
               <img src={el.img} alt="" className="w-[40px] h-[40px]" />

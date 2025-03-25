@@ -4,7 +4,7 @@ const DnDContext = createContext([null, (_:any) => {}]);
  
 export const DnDProvider = ({ children }:{children:ReactNode}) => {
   const [type, setType] = useState(null);
- 
+
   return (
     <DnDContext.Provider value={[type, setType]}>
       {children}

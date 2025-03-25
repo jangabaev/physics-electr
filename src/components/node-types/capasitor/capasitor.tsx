@@ -10,8 +10,8 @@ const CapasitorType = memo(({ data, isConnectable}) => {
         onConnect={(params) => console.log('handle onConnect', params)}
         isConnectable={isConnectable}
       />
-      <div className='bg-black'>
-        Custom Color Picker Node:
+      <div className=''>
+        <img src="/assets/capasitor-png.png" alt="" className='w-[50px] h-[50px]' />
       </div>
       <Handle
         type="source"

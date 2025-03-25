@@ -1,1 +1,1 @@
-export {default as CapisatorType} from "./capasitor/capasitor"
+export { default as CapisatorType } from "./capasitor/capasitor";
