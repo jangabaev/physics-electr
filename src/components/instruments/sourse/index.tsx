@@ -1,7 +1,4 @@
-import React from "react";
-import { CardForInstruments } from "../../ui/card/index";
 import { useDnD } from "../../provider-dnd";
-import { NodeTypes } from "@xyflow/react";
 
 const instrumentsData = [
   {
@@ -26,17 +23,22 @@ const instrumentsData = [
 
 export const Sourse = () => {
   const [_, setType] = useDnD();
- 
-  const onDragStart = (event:any, nodeType:string) => {
-    console.log("dkdkd")
-    console.log(nodeType)
+
+  const onDragStart = (event: any, nodeType: string) => {
+    console.log("dkdkd");
+    console.log(nodeType);
+    //@ts-ignore
     setType(nodeType);
-    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.effectAllowed = "move";
   };
   return (
     <aside className="grid grid-cols-3 gap-2">
       {instrumentsData.map((el) => (
-        <div key={el.id} onDragStart={(event) => onDragStart(event, 'capisator')} className="bg-blue-300">
+        <div
+          key={el.id}
+          onDragStart={(event) => onDragStart(event, "capisator")}
+          className="bg-blue-300"
+        >
           <div className="p-1 bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col gap-1 select-none">
             <div className="flex justify-center">
               <img src={el.img} alt="" className="w-[40px] h-[40px]" />

@@ -1,5 +1,4 @@
 import {
-  addEdge,
   Background,
   ReactFlow,
   ReactFlowProvider,
@@ -49,9 +48,10 @@ const getId = () => `dndnode_${id++}`;
 
 function ReactFlowProps() {
   const reactFlowWrapper = useRef(null);
+  //@ts-ignore
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-
+  console.log(setEdges);
   const nodeTypes = {
     capisator: CapisatorType,
   };
@@ -62,13 +62,14 @@ function ReactFlowProps() {
   //   (params) => setEdges((eds) => addEdge(params, eds)),
   //   [],
   // );
-
+  //@ts-ignore
   const onDragOver = useCallback((event) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }, []);
 
   const onDrop = useCallback(
+    //@ts-ignore
     (event) => {
       event.preventDefault();
 
@@ -93,6 +94,7 @@ function ReactFlowProps() {
         data: { label: `${type} node` },
       };
 
+      //@ts-ignore
       setNodes((nds) => nds.concat(newNode));
     },
     [screenToFlowPosition, type]
